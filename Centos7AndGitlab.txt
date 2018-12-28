@@ -1,0 +1,36 @@
+# yum install curl policycoreutils-python openssh-server 
+
+# yum install postfix
+# systemctl start postfix
+# systemctl enable postfix
+# systemctl status postfix
+
+
+$ curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.rpm.sh | sudo bash
+
+# EXTERNAL_URL="http://gitlab.Your_Domain_Or_IP.com" yum install -y gitlab-ce
+
+
+
+vi /etc/gitlab/gitlab.rb 
+
+# gitlab-ctl reconfigure
+
+# firewall-cmd --permanent --add-service=80/tcp
+# firewall-cmd --permanent --add-service=443/tcp
+# systemctl reload firewalld
+
+
+Step 3: Perform Initial Gitlab Setup
+6. Now, open a web browser and access your gitlab instance using the following URL you set during installation.
+
+http://gitlab.Your_Domain_Or_IP.com
+
+
+
+7. On your first visit, you’ll be redirected to a password reset screen, create a new password for your new admin account and click “Change your password”. Once you set, it will be redirected back to the login screen and login with username root and the password you set.
+
+GitLab Admin Login
+GitLab Admin Login
+
+8. A successful login should take you into the admin user account as shown in the screenshot. From, here, you can create an object, create a group, add people or configure your gitlab instance as you wish. You can also edit your user profile, configure your email, and add SSH keys to your gitlab instance, and more.
